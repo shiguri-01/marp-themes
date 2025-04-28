@@ -1,0 +1,21 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - name: format
+      grob: "*.{css,json,md}"
+      run: npx prettier --write --ignore-unknown {staged_files}
+      staged_files: true
+      skip:
+        - merge
+        - rebase
+
+pre-push:
+  parallel: true
+  jobs:
+    - name: format
+      grob: "*.{css,json,md}"
+      run: npx prettier --write --ignore-unknown {staged_files}
+      staged_files: true
+      skip:
+        - merge
+        - rebase
