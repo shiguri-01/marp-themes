@@ -1,0 +1,431 @@
+/* @theme symple */
+
+@import "default";
+
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto");
+  size-adjust: 100%;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: local("Noto Sans JP");
+  size-adjust: 95%;
+  font-weight: 440;
+}
+
+:root {
+  /* Color Palette */
+  --color-gray-0: oklch(0.98 0 0);
+  --color-gray-1: oklch(0.94 0 0);
+  --color-gray-2: oklch(0.46 0 0);
+  --color-gray-3: oklch(0.16 0 0);
+
+  --color-blue-0: oklch(0.965 0.02 266.36);
+  --color-blue-1: oklch(0.88 0.06 266.36);
+  --color-blue-2: oklch(0.49 0.2 266.36);
+  --color-blue-3: oklch(0.3 0.13 266.36);
+
+  --color-red-0: oklch(0.97 0.02 13.84);
+  --color-red-1: oklch(0.87 0.07 24.22);
+  --color-red-2: oklch(0.49 0.18 35.65);
+  --color-red-3: oklch(0.32 0.12 35.65);
+
+  --color-green-0: oklch(0.96 0.02 130.77);
+  --color-green-1: oklch(0.84 0.08 130.77);
+  --color-green-2: oklch(0.5 0.14 134.77);
+  --color-green-3: oklch(0.3 0.08 134.77);
+
+  --color-fg: var(--color-gray-3);
+  --color-bg: var(--color-gray-0);
+  --color-secondary-fg: var(--color-gray-2);
+  --color-secondary-bg: var(--color-gray-1);
+
+  --color-accent-fg: var(--color-blue-2);
+  --color-accent-bg: var(--color-blue-1);
+  --color-accent-secondary-fg: var(--color-blue-3);
+  --color-accent-secondary-bg: var(--color-blue-0);
+
+  /* Font Families */
+  --font-sans: "Roboto", "Noto Sans JP", sans-serif;
+  --font-mono: "Source Han Code JP", monospace;
+
+  /* Font Size Definitions */
+  --font-base: 40px;
+  --font-5l: calc(var(--font-base) * 8 / 3);
+  --font-4l: calc(var(--font-base) * 8 / 4);
+  --font-3l: calc(var(--font-base) * 8 / 5);
+  --font-2l: calc(var(--font-base) * 8 / 6);
+  --font-l: calc(var(--font-base) * 8 / 7);
+  --font-s: calc(var(--font-base) * 8 / 9);
+  --font-2s: calc(var(--font-base) * 8 / 10);
+  --font-3s: calc(var(--font-base) * 8 / 11);
+  --font-4s: calc(var(--font-base) * 8 / 12);
+  --font-5s: calc(var(--font-base) * 8 / 13);
+  --font-xs: 20px;
+
+  /* Line Heights */
+  --line-base: 1.5;
+  --line-tight: 1.25;
+  --line-none: 1;
+
+  /* Spacing */
+  --space-1: 12px;
+  --space-2: calc(var(--space-1) * 2);
+  --space-3: calc(var(--space-1) * 3);
+  --space-4: calc(var(--space-1) * 5);
+  --space-5: calc(var(--space-1) * 8);
+  --space-6: calc(var(--space-1) * 13);
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-bold: 600;
+  --weight-bolder: 900;
+
+  /* Border Radius */
+  --radius: 6px;
+
+  font-family: var(--font-sans);
+  font-size: var(--font-base);
+  font-weight: var(--weight-regular);
+  font-feature-settings: "palt";
+  line-height: var(--line-base);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section.blue {
+  --color-accent-fg: var(--color-blue-2);
+  --color-accent-bg: var(--color-blue-1);
+  --color-accent-secondary-fg: var(--color-blue-3);
+  --color-accent-secondary-bg: var(--color-blue-0);
+}
+section.red {
+  --color-accent-fg: var(--color-red-2);
+  --color-accent-bg: var(--color-red-1);
+  --color-accent-secondary-fg: var(--color-red-3);
+  --color-accent-secondary-bg: var(--color-red-0);
+}
+section.green {
+  --color-accent-fg: var(--color-green-2);
+  --color-accent-bg: var(--color-green-1);
+  --color-accent-secondary-fg: var(--color-green-3);
+  --color-accent-secondary-bg: var(--color-green-0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-fg);
+  line-height: var(--line-tight);
+  font-weight: var(--weight-bold);
+
+  padding: 0;
+  margin: 0 0 var(--space-1);
+
+  strong {
+    color: var(--color--fg);
+  }
+}
+h1 {
+  font-size: var(--font-4l);
+  margin: 0;
+}
+h2 {
+  font-size: var(--font-3l);
+}
+h3 {
+  font-size: var(--font-2l);
+}
+h4 {
+  font-size: var(--font-base);
+}
+h5,
+h6 {
+  font-size: var(--font-s);
+  color: var(--color-secondary-fg);
+  font-weight: var(--weight-bolder);
+}
+
+header,
+footer {
+  color: var(--color-secondary-fg);
+  font-size: var(--font-xs);
+}
+
+strong {
+  font-weight: var(--weight-bold);
+  background: linear-gradient(transparent 72%, var(--color-accent-bg) 72%);
+}
+
+a {
+  color: var(--color-accent-secondary-fg);
+  text-decoration: underline;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-regular);
+  font-size: var(--font-2s);
+  background-color: var(--color-accent-secondary-bg);
+  color: var(--color-accent-secondary-fg);
+
+  padding: 0.1em 0.2em;
+  border-radius: var(--radius);
+}
+
+pre {
+  background-color: var(--color-accent-secondary-bg);
+  border-radius: var(--radius);
+  border: none;
+
+  line-height: var(--line-base);
+
+  code {
+    font-size: var(--font-3s);
+    background-color: transparent;
+
+    padding: 100;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+/* Blockquote styles (except on title page) */
+/* (In title, blockquote is used to display author name) */
+section:not(.title) blockquote {
+  background-color: var(--color-accent-secondary-bg);
+  border: none;
+  border-radius: var(--radius);
+
+  color: var(--color-fg);
+  font-size: var(--font-s);
+
+  padding: var(--space-1) var(--space-2);
+
+  & cite {
+    padding-left: var(--space-1);
+
+    font-size: var(--font-3s);
+    font-weight: var(--weight-bold);
+    font-style: normal;
+
+    text-align: right;
+    padding-right: var(--space-1);
+
+    margin-top: var(--space-1);
+    display: block;
+  }
+}
+
+ul {
+  padding-left: var(--space-4);
+
+  & li::marker {
+    color: var(--color-accent-fg);
+  }
+}
+ol {
+  padding-left: var(--space-4);
+
+  & li::marker {
+    color: var(--color-accent-fg);
+    font-weight: var(--weight-bold);
+    font-size: 0.9em;
+  }
+}
+li {
+  margin-top: 0px;
+}
+
+/* Columns layout */
+.columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--space-3);
+  margin-left: 0;
+}
+
+section {
+  align-content: normal;
+  position: relative;
+
+  padding: var(--space-3) var(--space-4);
+  &:has(header) {
+    padding-top: var(--space-4);
+  }
+
+  /* Left border decoration */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--space-1);
+    height: 100%;
+    background-color: var(--color-accent-fg);
+  }
+
+  /* Page number */
+  &::after {
+    content: attr(data-marpit-pagination) " / "
+      attr(data-marpit-pagination-total);
+    color: var(--color-accent-secondary-fg);
+    font-weight: var(--weight-regular);
+    font-size: var(--font-5s);
+  }
+}
+
+/* Title page */
+section.title {
+  padding: var(--space-4);
+  padding-bottom: var(--space-5);
+  padding-left: calc(
+    var(--space-4) + var(--space-4)
+  ); /* Extra left padding for the wider border */
+
+  line-height: var(--line-tight);
+
+  align-content: end;
+
+  & > * {
+    margin: 0;
+  }
+
+  /* Blockquote styles on the title page */
+  & blockquote {
+    font-size: var(--font-s);
+    color: var(--color-fg);
+
+    line-height: var(--line-base);
+
+    display: flex;
+    align-items: flex-end;
+    justify-items: start;
+
+    padding: 0;
+    border: none;
+
+    margin-top: var(--space-4);
+
+    & > * {
+      margin: 0;
+      margin-left: auto;
+      text-align: right;
+
+      strong {
+        background: none;
+      }
+    }
+  }
+
+  & header {
+    margin-left: calc(var(--space-4) + var(--space-2));
+    font-size: var(--font-5s);
+    color: var(--color-fg);
+  }
+  & footer {
+    margin-left: calc(var(--space-4) + var(--space-2));
+    font-size: var(--font-xs);
+  }
+
+  /* Hide page number*/
+  &::after {
+    display: none;
+  }
+
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--space-5);
+    height: 100%;
+    background-color: var(--color-accent-fg);
+  }
+}
+
+/* Utility classes */
+section {
+  .base {
+    font-size: var(--font-base);
+  }
+  .lg {
+    font-size: var(--font-l);
+  }
+  .xl {
+    font-size: var(--font-2l);
+  }
+  .sm {
+    font-size: var(--font-s);
+  }
+  .xs {
+    font-size: var(--font-2s);
+  }
+  .bold {
+    font-weight: var(--weight-bold);
+  }
+
+  .space {
+    height: var(--space-3);
+    width: var(--space-3);
+  }
+
+  &.center {
+    text-align: center;
+    align-content: center;
+  }
+  &.center-x {
+    text-align: center;
+  }
+  &.center-y {
+    align-content: center;
+  }
+}
+
+/* Arrow shapes (using clip-path) */
+/* Up arrow */
+.up {
+  display: inline-block;
+  background: var(--color-accent-fg);
+  height: calc(tan(60deg) * 0.72em / 2);
+  width: 0.72em;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+/* Down arrow */
+.down {
+  display: inline-block;
+  background: var(--color-accent-fg);
+  height: calc(tan(60deg) * 0.72em / 2);
+  width: 0.72em;
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+}
+/* Right arrow */
+.right {
+  display: inline-block;
+  background: var(--color-accent-fg);
+  height: 0.72em;
+  width: calc(tan(60deg) * 0.72em / 2);
+  clip-path: polygon(100% 50%, 0 100%, 0 0);
+}
+/* Left arrow */
+.left {
+  display: inline-block;
+  background: var(--color-accent-fg);
+  height: 0.72em;
+  width: calc(tan(60deg) * 0.72em / 2);
+  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+}
