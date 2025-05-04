@@ -1,17 +1,17 @@
 ---
 marp: true
-theme: symple
+theme: simple
 math: mathjax
 ---
 
 <!--
 paginate: true
 _class: title
-header: '\<header\> theme: symple'
-footer: '\<hooter\> theme: symple'
+header: '\<header\> theme: simple'
+footer: '\<hooter\> theme: simple'
 -->
 
-# \<h1\>テーマの見本: symple
+# \<h1\>テーマの見本: simple
 
 サブタイトル
 

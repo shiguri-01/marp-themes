@@ -1,4 +1,4 @@
 {
-  "markdown.marp.themes": ["./themes/symple.css"],
+  "markdown.marp.themes": ["./themes/simple.css"],
   "markdown.marp.html": "all"
 }
