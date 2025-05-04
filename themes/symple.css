@@ -2,7 +2,7 @@
 
 @import "default";
 
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @font-face {
   font-family: "Roboto";
@@ -26,19 +26,19 @@
   --color-gray-3: oklch(0.16 0 0);
 
   --color-blue-0: oklch(0.965 0.02 266.36);
-  --color-blue-1: oklch(0.88 0.06 266.36);
+  --color-blue-1: oklch(0.86 0.06 266.36);
   --color-blue-2: oklch(0.49 0.2 266.36);
   --color-blue-3: oklch(0.3 0.13 266.36);
 
   --color-red-0: oklch(0.97 0.02 13.84);
-  --color-red-1: oklch(0.87 0.07 24.22);
+  --color-red-1: oklch(0.85 0.07 24.22);
   --color-red-2: oklch(0.49 0.18 35.65);
   --color-red-3: oklch(0.32 0.12 35.65);
 
-  --color-green-0: oklch(0.96 0.02 130.77);
-  --color-green-1: oklch(0.84 0.08 130.77);
-  --color-green-2: oklch(0.5 0.14 134.77);
-  --color-green-3: oklch(0.3 0.08 134.77);
+  --color-green-0: oklch(0.96 0.02 135.77);
+  --color-green-1: oklch(0.82 0.08 135.77);
+  --color-green-2: oklch(0.48 0.14 145.77);
+  --color-green-3: oklch(0.3 0.08 145.77);
 
   --color-fg: var(--color-gray-3);
   --color-bg: var(--color-gray-0);
@@ -81,13 +81,16 @@
   --space-5: calc(var(--space-1) * 8);
   --space-6: calc(var(--space-1) * 13);
 
+  /* margin-bottom of block elements in default theme */
+  --space-block: 16px;
+
   /* Font Weights */
   --weight-regular: 400;
   --weight-bold: 600;
   --weight-bolder: 900;
 
   /* Border Radius */
-  --radius: 6px;
+  --radius: 4px;
 
   font-family: var(--font-sans);
   font-size: var(--font-base);
@@ -150,10 +153,13 @@ h3 {
 h4 {
   font-size: var(--font-base);
 }
-h5,
-h6 {
+h5 {
   font-size: var(--font-s);
+  font-weight: var(--weight-bolder);
+}
+h6 {
   color: var(--color-secondary-fg);
+  font-size: var(--font-s);
   font-weight: var(--weight-bolder);
 }
 
@@ -209,7 +215,6 @@ section:not(.title) blockquote {
   border-radius: var(--radius);
 
   color: var(--color-fg);
-  font-size: var(--font-s);
 
   padding: var(--space-1) var(--space-2);
 
@@ -246,15 +251,6 @@ ol {
 }
 li {
   margin-top: 0px;
-}
-
-/* Columns layout */
-.columns {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  gap: var(--space-3);
-  margin-left: 0;
 }
 
 section {
@@ -301,6 +297,10 @@ section.title {
 
   & > * {
     margin: 0;
+  }
+  & > *:nth-last-child(2):has(+ footer):not(blockquote):not(header),
+  & > *:last-child:not(footer):not(blockquote):not(header) {
+    margin-bottom: var(--space-5) !important;
   }
 
   /* Blockquote styles on the title page */
@@ -394,38 +394,70 @@ section {
   &.center-y {
     align-content: center;
   }
+
+  /* Columns layout */
+  .columns {
+    display: flex;
+    & > div {
+      flex: 1;
+    }
+
+    gap: var(--space-4);
+    margin-left: 0;
+    margin-bottom: var(--space-block);
+    &:last-child,
+    &:has(+ footer) {
+      margin-bottom: 0;
+    }
+  }
 }
 
-/* Arrow shapes (using clip-path) */
-/* Up arrow */
-.up {
-  display: inline-block;
-  background: var(--color-accent-fg);
-  height: calc(tan(60deg) * 0.72em / 2);
-  width: 0.72em;
-  clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-/* Down arrow */
-.down {
-  display: inline-block;
-  background: var(--color-accent-fg);
-  height: calc(tan(60deg) * 0.72em / 2);
-  width: 0.72em;
-  clip-path: polygon(50% 100%, 100% 0, 0 0);
-}
-/* Right arrow */
+/* Arrow */
+.up,
+.down,
+.left,
 .right {
-  display: inline-block;
   background: var(--color-accent-fg);
-  height: 0.72em;
-  width: calc(tan(60deg) * 0.72em / 2);
-  clip-path: polygon(100% 50%, 0 100%, 0 0);
+  margin: auto 0.2em;
+
+  &:is(span) {
+    display: inline-block;
+  }
+
+  &:is(div):not(:last-child),
+  &:is(div):not(:has(+ footer)) {
+    margin-bottom: var(--space-block);
+  }
+
+  &:is(.columns > div) {
+    margin: auto 0;
+
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+  }
 }
-/* Left arrow */
+.up {
+  height: calc(tan(60deg) * 0.72em / 2);
+  width: 0.72em;
+
+  clip-path: polygon(50% 0, 100% 90%, 0 90%);
+}
+.down {
+  height: calc(tan(60deg) * 0.72em / 2);
+  width: 0.72em;
+
+  clip-path: polygon(50% 100%, 100% 10%, 0 10%);
+}
 .left {
-  display: inline-block;
-  background: var(--color-accent-fg);
   height: 0.72em;
   width: calc(tan(60deg) * 0.72em / 2);
-  clip-path: polygon(0 50%, 100% 100%, 100% 0);
+
+  clip-path: polygon(0 50%, 90% 100%, 90% 0);
+}
+.right {
+  height: 0.72em;
+  width: calc(tan(60deg) * 0.72em / 2);
+
+  clip-path: polygon(100% 50%, 10% 100%, 10% 0);
 }
