@@ -1,57 +1,60 @@
-/* @theme blueprint */
+/* @theme pebble */
 
 @import "default";
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zen+Maru+Gothic:wght@500;700;900&display=swap");
 
 @font-face {
-  font-family: "Roboto";
-  src: local("Roboto");
-  size-adjust: 100%;
-  font-weight: 400;
+  font-family: "Nunito";
+  src: local("Nunito");
+  size-adjust: 102%;
 }
 
 @font-face {
-  font-family: "Noto Sans JP";
-  src: local("Noto Sans JP");
+  font-family: "Zen Maru Gothic";
+  src: local("Zen Maru Gothic");
   size-adjust: 95%;
-  font-weight: 440;
 }
 
 :root {
   /* Color Palette */
-  --color-gray-0: oklch(0.97 0 0);
-  --color-gray-1: oklch(0.94 0 0);
-  --color-gray-2: oklch(0.52 0 0);
+  --color-gray-0: oklch(0.96 0 0);
+  --color-gray-1: oklch(0.93 0 0);
+  --color-gray-2: oklch(0.6 0 0);
   --color-gray-3: oklch(0.16 0 0);
 
-  --color-blue-0: oklch(0.965 0.07 270);
-  --color-blue-1: oklch(0.88 0.14 270);
-  --color-blue-2: oklch(0.57 0.32 266);
-  --color-blue-3: oklch(0.34 0.17 266);
+  --color-blue-0: oklch(0.94 0.04 270);
+  --color-blue-1: oklch(0.84 0.07 266);
+  --color-blue-2: oklch(0.72 0.13 265);
+  --color-blue-3: oklch(0.46 0.11 265);
 
-  --color-red-0: oklch(0.97 0.06 35);
-  --color-red-1: oklch(0.85 0.12 54);
-  --color-red-2: oklch(0.55 0.22 54);
-  --color-red-3: oklch(0.4 0.16 54);
+  --color-red-0: oklch(0.94 0.03 10);
+  --color-red-1: oklch(0.82 0.08 14);
+  --color-red-2: oklch(0.7 0.12 15);
+  --color-red-3: oklch(0.45 0.11 18);
 
-  --color-green-0: oklch(0.96 0.05 135);
-  --color-green-1: oklch(0.84 0.1 135);
-  --color-green-2: oklch(0.48 0.2 158);
-  --color-green-3: oklch(0.36 0.15 158);
+  --color-green-0: oklch(0.92 0.05 125);
+  --color-green-1: oklch(0.82 0.09 130);
+  --color-green-2: oklch(0.67 0.12 135);
+  --color-green-3: oklch(0.44 0.09 140);
+
+  /* --color-yellow-0: oklch(0.92 0.05 103);
+  --color-yellow-1: oklch(0.83 0.10 103);
+  --color-yellow-2: oklch(0.78 0.14 103);
+  --color-yellow-3: oklch(0.42 0.14 103); */
 
   --color-fg: var(--color-gray-3);
   --color-bg: var(--color-gray-0);
   --color-secondary-fg: var(--color-gray-2);
   --color-secondary-bg: var(--color-gray-1);
 
-  --color-accent-fg: var(--color-red-2);
-  --color-accent-bg: var(--color-red-1);
-  --color-accent-secondary-fg: var(--color-red-3);
-  --color-accent-secondary-bg: var(--color-red-0);
+  --color-accent-fg: var(--color-green-2);
+  --color-accent-bg: var(--color-green-1);
+  --color-accent-secondary-fg: var(--color-green-3);
+  --color-accent-secondary-bg: var(--color-green-0);
 
   /* Font Families */
-  --font-sans: "Roboto", "Noto Sans JP", sans-serif;
+  --font-sans: "Nunito", "Zen Maru Gothic", sans-serif;
   --font-mono: "Source Han Code JP", monospace;
 
   /* Font Size Definitions */
@@ -74,7 +77,7 @@
   --line-none: 1;
 
   /* Spacing */
-  --space-1: 12px;
+  --space-1: 16px;
   --space-2: calc(var(--space-1) * 2);
   --space-3: calc(var(--space-1) * 3);
   --space-4: calc(var(--space-1) * 5);
@@ -85,12 +88,12 @@
   --space-block: 16px;
 
   /* Font Weights */
-  --weight-regular: 400;
-  --weight-bold: 600;
+  --weight-regular: 500;
+  --weight-bold: 700;
   --weight-bolder: 900;
 
   /* Border Radius */
-  --radius: 4px;
+  --radius: 24px;
 
   font-family: var(--font-sans);
   font-size: var(--font-base);
@@ -128,16 +131,14 @@ h1 {
   font-weight: var(--weight-bold);
   line-height: var(--line-tight);
   color: var(--color-fg);
-  padding: var(--space-1) 0;
+  padding: 0;
 }
 h2 {
-  font-size: var(--font-2l);
+  font-size: var(--font-l);
   font-weight: var(--weight-bold);
   line-height: var(--line-tight);
-  color: var(--color-fg);
-  padding: 0 0.1em 0.1em;
-
-  border-bottom: 2px solid var(--color-fg);
+  color: var(--color-accent-fg);
+  padding: 0;
 }
 h3 {
   font-size: var(--font-l);
@@ -201,92 +202,88 @@ pre {
 
 ul,
 ol {
-  padding-left: 1.1em;
+  padding-left: 1.2em;
 }
-
-section {
-  padding: var(--space-4);
-
-  background-color: var(--color-bg);
-  background-size: 36px 36px;
-  background-image:
-    repeating-linear-gradient(
-      oklch(from var(--color-gray-2) l c h / 0.18) 0,
-      oklch(from var(--color-gray-2) l c h / 0.18) 1px,
-      transparent 1px,
-      transparent 100%
-    ),
-    repeating-linear-gradient(
-      90deg,
-      oklch(from var(--color-gray-2) l c h / 0.18) 0,
-      oklch(from var(--color-gray-2) l c h / 0.18) 1px,
-      transparent 1px,
-      transparent 100%
-    );
-
-  &::after {
-    content: attr(data-marpit-pagination) " / "
-      attr(data-marpit-pagination-total);
-    font-size: var(--font-5s);
-    color: var(--color-fg);
-  }
-
-  header {
-    font-size: var(--font-xs);
-    font-weight: var(--weight-bold);
-    color: var(--color-fg);
-  }
-
-  footer {
-    font-size: var(--font-xs);
-    color: var(--color-secondary-fg);
-  }
+ul li::marker {
+  content: "• ";
+  color: var(--color-accent-fg);
+}
+ol li::marker {
+  font-size: 0.8em;
+  font-weight: var(--weight-bold);
+  color: var(--color-accent-fg);
 }
 
 section.title {
-  font-size: var(--font-2s);
+  color: var(--color-bg);
 
+  padding: var(--space-4) calc(var(--space-4) + var(--space-5))
+    calc(var(--space-4) + var(--space-3)) var(--space-4);
+
+  background: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--space-5));
+    height: calc(100% - var(--space-3));
+    background: var(--color-accent-fg);
+    border-radius: 0 0 280px 0;
+
+    z-index: -1;
+  }
   &::after {
-    display: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-bg);
+
+    z-index: -2;
   }
 
   & > :is(p, h1, h2, h3, h4, h5, h6) {
-    border-left: 4px solid var(--color-fg);
-    padding-left: var(--space-2);
-    margin: 0;
+    color: var(--color-bg);
   }
 
   blockquote {
+    margin-top: var(--space-3);
+    padding-left: 0;
     border: none;
-    padding-left: var(--space-2);
 
-    color: var(--color-fg);
-    font-size: var(--font-4s);
-    font-weight: var(--weight-bold);
+    color: var(--color-bg);
+    font-size: var(--font-2s);
+  }
 
-    margin-top: var(--space-4);
+  header {
+    position: static;
+    color: var(--color-bg);
+    font-size: var(--font-3s);
+    margin-bottom: var(--space-1);
   }
 
   footer {
-    color: var(--color-accent-fg);
+    bottom: 0.2em;
+
+    font-size: var(--font-xs);
+    color: var(--color-accent-secondary-fg);
   }
 }
 
 section:not(.title) {
+  padding: var(--space-2) var(--space-3) var(--space-3);
   align-content: normal;
-
-  header {
-    left: 0;
-    margin-left: var(--space-4);
-  }
+  background: var(--color-bg);
 
   blockquote {
     border: none;
     padding: var(--space-1) var(--space-2);
-    border-left: 4px solid var(--color-accent-fg);
     border-radius: var(--radius);
 
-    background: var(--color-secondary-bg);
+    background: var(--color-accent-secondary-bg);
 
     font-size: var(--font-base);
     color: var(--color-fg);
@@ -294,17 +291,51 @@ section:not(.title) {
     cite {
       margin-top: var(--space-1);
       padding-left: var(--space-1);
-
       font-size: var(--font-3s);
-      font-weight: var(--weight-bold);
-      font-style: normal;
 
       display: block;
+
+      &::before {
+        content: "— ";
+      }
     }
   }
 
-  header {
+  &[data-paginate="true"]::after {
+    bottom: 0;
+    right: 0;
+
+    content: attr(data-marpit-pagination);
+
+    aspect-ratio: 1;
+    width: 2.4em;
+    border-radius: 9999px 0 0 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding-right: 0.6em;
+    padding-bottom: 0.2em;
+
     font-size: var(--font-4s);
+    font-weight: var(--weight-bold);
+    background: var(--color-accent-bg);
+    color: var(--color-fg);
+  }
+
+  header {
+    position: static;
+    color: var(--color-fg);
+    font-size: var(--font-3s);
+    font-weight: var(--weight-bold);
+  }
+
+  footer {
+    padding-left: var(--space-2);
+    color: var(--color-fg);
+    font-size: var(--font-xs);
+    bottom: var(--space-1);
   }
 }
 
@@ -397,7 +428,8 @@ section.center {
   width: 100%;
   height: 100%;
   border-style: solid;
-  border-color: var(--color-accent-secondary-fg);
+  border-color: var(--color-accent-fg);
+  border-radius: 0 0.25em 0 0;
   border-width: 0.2em 0.2em 0 0;
   box-sizing: border-box;
 }

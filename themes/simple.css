@@ -378,7 +378,10 @@ section {
   .bold {
     font-weight: var(--weight-bold);
   }
-
+  .accent {
+    color: var(--color-accent-fg);
+  }
+  
   .space {
     height: var(--space-3);
     width: var(--space-3);

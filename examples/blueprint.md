@@ -11,9 +11,9 @@ header: '\<header\> theme: blueprint'
 footer: '\<hooter\> theme: blueprint'
 -->
 
-# テーマの見本: blueprint
+# テーマの見本：blueprint
 
-サブタイトル
+まじめで遊び心もあるテーマ
 
 > ○○○学校 □□科
 > 山田 太郎

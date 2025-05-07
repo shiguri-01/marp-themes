@@ -1,19 +1,19 @@
 ---
 marp: true
-theme: simple
+theme: pebble
 math: mathjax
 ---
 
 <!--
 paginate: true
 _class: title
-header: '\<header\> theme: simple'
-footer: '\<hooter\> theme: simple'
+header: '\<header\> theme: pebble'
+footer: '\<hooter\> theme: pebble'
 -->
 
-# テーマの見本：simple
+# テーマの見本：pebble
 
-使いやすく印象的なテーマ
+素朴でやさしい印象のテーマ
 
 > ○○○学校 □□科
 > 山田 太郎
