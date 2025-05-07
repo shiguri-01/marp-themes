@@ -4,7 +4,7 @@ pre-commit:
     - name: format
       grob: "*.{css,json,md}"
       run: npx prettier --write --ignore-unknown {staged_files}
-      staged_files: true
+      stage_fixed: true
       skip:
         - merge
         - rebase
@@ -15,7 +15,7 @@ pre-push:
     - name: format
       grob: "*.{css,json,md}"
       run: npx prettier --write --ignore-unknown {staged_files}
-      staged_files: true
+      stage_fixed: true
       skip:
         - merge
         - rebase
