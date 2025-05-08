@@ -2,14 +2,18 @@
   "name": "marp-themes",
   "version": "1.0.0",
   "description": "",
-  "license": "MIT",
+  "license": "CC0-1.0",
   "author": "shiguri",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "export:simple": "marp --images jpeg --theme themes/simple.css examples/simple.md && marp --pdf --theme themes/simple.css examples/simple.md",
+    "export:blueprint": "marp --images jpeg --theme themes/blueprint.css examples/blueprint.md && marp --pdf --theme themes/blueprint.css examples/blueprint.md",
+    "export:pebble": "marp --images jpeg --theme themes/pebble.css examples/pebble.md && marp --pdf --theme themes/pebble.css examples/pebble.md"
   },
   "devDependencies": {
+    "@marp-team/marp-cli": "^4.1.2",
     "lefthook": "^1.11.11",
     "prettier": "^3.5.3"
   }

@@ -1,6 +1,5 @@
-test.md
-test.html
-test.pdf
+*.html
+test/
 
 # Logs
 logs
