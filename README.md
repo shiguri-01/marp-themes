@@ -9,9 +9,9 @@
 [PDF](./examples/simple.pdf)
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px" >
-<img src="examples/simple.001.jpg" width="280px" />
-<img src="examples/simple.002.jpg" width="280px" />
-<img src="examples/simple.003.jpg" width="280px" />
+<img src="examples/simple.001.jpg" width="240px" />
+<img src="examples/simple.002.jpg" width="240px" />
+<img src="examples/simple.003.jpg" width="240px" />
 </div>
 
 ### blueprint
@@ -19,9 +19,9 @@
 [PDF](./examples/blueprint.pdf)
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px" >
-<img src="examples/blueprint.001.jpg" width="280px" />
-<img src="examples/blueprint.002.jpg" width="280px" />
-<img src="examples/blueprint.003.jpg" width="280px" />
+<img src="examples/blueprint.001.jpg" width="240px" />
+<img src="examples/blueprint.002.jpg" width="240px" />
+<img src="examples/blueprint.003.jpg" width="240px" />
 </div>
 
 ### pebble
@@ -29,9 +29,9 @@
 [PDF](./examples/pebble.pdf)
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px" >
-<img src="examples/pebble.001.jpg" width="280px" />
-<img src="examples/pebble.002.jpg" width="280px" />
-<img src="examples/pebble.003.jpg" width="280px" />
+<img src="examples/pebble.001.jpg" width="240px" />
+<img src="examples/pebble.002.jpg" width="240px" />
+<img src="examples/pebble.003.jpg" width="240px" />
 </div>
 
 ## 使い方
@@ -90,7 +90,7 @@ _class: title
 > 山田 太郎
 ```
 
-<img src="assets/title.jpg" width="280px" />
+<img src="assets/title.jpg" width="240px" />
 
 ### アクセントカラー
 
@@ -103,9 +103,9 @@ class: blue
 `red`、`green`、`blue`のいずれかのアクセントカラーを指定できます。
 
 <div style="display: flex; flex-wrap: wrap; gap: 8px" >
-<img src="assets/color-red.jpg" width="280px" />
-<img src="assets/color-green.jpg" width="280px" />
-<img src="assets/color-blue.jpg" width="280px" />
+<img src="assets/color-red.jpg" width="240px" />
+<img src="assets/color-green.jpg" width="240px" />
+<img src="assets/color-blue.jpg" width="240px" />
 </div>
 
 > [!NOTE]
@@ -134,7 +134,7 @@ _class: center
 -->
 ```
 
-<img src="assets/center.jpg" width="280px" />
+<img src="assets/center.jpg" width="240px" />
 
 #### 上下中央
 
@@ -144,7 +144,7 @@ _class: center-y
 -->
 ```
 
-<img src="assets/center-y.jpg" width="280px" />
+<img src="assets/center-y.jpg" width="240px" />
 
 #### 左右中央
 
@@ -154,7 +154,7 @@ _class: center-x
 -->
 ```
 
-<img src="assets/center-x.jpg" width="280px" />
+<img src="assets/center-x.jpg" width="240px" />
 
 ### 段組み
 
@@ -173,7 +173,7 @@ _class: center-x
 </div>
 ```
 
-<img src="assets/columns.jpg" width="280px" />
+<img src="assets/columns.jpg" width="240px" />
 
 ### 矢印
 
@@ -189,7 +189,7 @@ _class: center-x
 <div class="left"></div>
 ```
 
-<img src="assets/arrow.jpg" width="280px" />
+<img src="assets/arrow.jpg" width="240px" />
 
 ## ライセンス
 
