@@ -355,6 +355,33 @@ section {
 section.center-x,
 section.center {
   text-align: center;
+
+  pre {
+    text-align: left;
+
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  blockquote {
+    text-align: left;
+    max-width: 85%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul,
+  ol {
+    text-align: left;
+  }
+  ul:not(li > ul),
+  ol:not(li > ol) {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 section.center-y,
 section.center {
